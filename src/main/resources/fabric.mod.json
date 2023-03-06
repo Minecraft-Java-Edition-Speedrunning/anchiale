@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "anchiale",
+  "id": "${archivesBaseName}",
   "version": "${version}",
   "name": "Anchiale",
   "description": "",
