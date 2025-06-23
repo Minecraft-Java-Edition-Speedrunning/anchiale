@@ -34,7 +34,7 @@ public abstract class GameMenuScreenMixin extends Screen {
 
     @Inject(method = "init", at = @At("TAIL"))
     private void addAnchialeButton(CallbackInfo ci, @Share("originalX") LocalIntRef originalX, @Share("originalY") LocalIntRef originalY) {
-        int x, y, width;
+        int x, y;
         switch (Anchiale.buttonLocation) {
             case BOTTOM_RIGHT:
                 x = this.width - 104;
