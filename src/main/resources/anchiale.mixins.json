@@ -4,8 +4,11 @@
   "package": "me.voidxwalker.anchiale.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "IntegratedServerMixin",
-    "GameMenuScreenMixin"
+    "GameMenuScreenMixin",
+    "IntegratedServerMixin"
+  ],
+  "client": [
+    "SkinOptionsScreenMixin"
   ],
   "injectors": {
     "defaultRequire": 1
