@@ -18,7 +18,9 @@ public class Anchiale {
                 Files.createFile(config);
                 saveConfig();
             }
-            buttonLocation = ButtonLocation.values()[Integer.parseInt(new String(Files.readAllBytes(config)))];
+            int ordinal = Integer.parseInt(new String(Files.readAllBytes(config)));
+            ordinal = Math.max(0, Math.min(ButtonLocation.values().length - 1, ordinal));
+            buttonLocation = ButtonLocation.values()[ordinal];
         } catch (Exception e) {
             LOGGER.error("Failed to create/read Anchiale config");
             e.printStackTrace();
@@ -36,8 +38,7 @@ public class Anchiale {
 
     public enum ButtonLocation {
         BOTTOM_RIGHT("Bottom Right"),
-        CENTER("Center"),
-        REPLACE_SQ("Replace Save and Quit");
+        CENTER("Center");
 
         private final String name;
 
